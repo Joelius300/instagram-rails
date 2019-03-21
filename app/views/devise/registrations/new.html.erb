@@ -11,8 +11,6 @@
             videos from your friends.</strong></h5>
 
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
-
             <div class="form-group">
               <%# <%= f.label :email %>
               <%= f.text_field :name, autofocus: true, autocomplete: "username", class: "form-control", placeholder: "Username" %>
@@ -40,6 +38,8 @@
             <div class="actions">
               <%= f.submit "Sign up", class: "btn btn-primary" %>
             </div>
+
+            <%= render "shared/devisemsgs" %>
           <% end %>
           <p class="light-color policyText">By signing up, you agree to our <br />
             <strong>Term &amp; Privacy Policy.</strong></p
