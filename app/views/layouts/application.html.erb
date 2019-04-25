@@ -13,7 +13,10 @@
     <% if current_user %>
       <%=render 'shared/navbar'%>
     <%end%>
-    <%= yield %>
+    
+    <div class='container'>
+      <%= yield %>
+    </div>
 
     <%=render 'shared/footer'%>
 
