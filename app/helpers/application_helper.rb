@@ -1,10 +1,9 @@
 module ApplicationHelper
   def avatar_url user
-    img = "pb#{user.id}.jpg"
-    if FileTest.exist?("#{::Rails.root}/public/images/#{img}")
-      image-url(img)
+    if (user.id < 4 && user.id > 0)
+      return "pb#{user.id}.png"
     else
-      image-url("templatePB.png")
+      return "templatePB.png"
     end
   end
 end
